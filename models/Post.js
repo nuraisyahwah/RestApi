@@ -9,13 +9,10 @@ const postSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true
-<<<<<<< Updated upstream
-=======
     },
     alamat: {
         type: String,
         required: true
->>>>>>> Stashed changes
     },
     created_date: {
         type: Date,
