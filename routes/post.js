@@ -37,20 +37,20 @@ router.get('/', async (req, res) => {
                         $dateToString: {
                             format: '%d-%m-%Y %H:%M:%S',
                             date: ' $created_date',
-                            timezone: ' +07:00'
+                            timezone: '+07:00'
                         }
                     },
                     modified_date: {
                         $dateToString: {
                             format: '%d-%m-%Y %H:%M:%S',
                             date: ' $created_date',
-                            timezone: ' +07:00'
+                            timezone: '+07:00'
                         }
                     },
                 }
             },
             {
-                $projrct: {
+                $project: {
                     userData: 0,
                     _id: 0
                 }
