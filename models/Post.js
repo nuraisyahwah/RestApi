@@ -1,10 +1,4 @@
-// const req = require('express/lib/request')
-
-const { required } = require("nodemon/lib/config")
-
-// const res = require('express/lib/response')
-const mongoose = required('mongoose')
-// const router = require('../routes/post')
+const mongoose = require('mongoose')
 
 const postSchema = mongoose.Schema({
     content: {
@@ -12,9 +6,9 @@ const postSchema = mongoose.Schema({
         require: true
     },
     user_id: {
-        type: mongoose.Schema.Types.ObjecId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
-        require: true
+        required: true
     },
     created_date: {
         type: Date,

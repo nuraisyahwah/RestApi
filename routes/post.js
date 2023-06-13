@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-
+const Post = require('../models/Post')
 
 function result(succ, msg, details) {
     if (details) {
