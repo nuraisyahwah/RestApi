@@ -1,4 +1,4 @@
-const Joi = require('joi')
+const Joi = require('joi');
 
 const registerValidation = (data) => {
     const schema = Joi.object({
@@ -9,7 +9,7 @@ const registerValidation = (data) => {
     return schema.validate(data)
 }
 
-const loginValidation = (date) => {
+const loginValidation = (data) => {
     const schema = Joi.object({
         username: Joi.string().required(),
         password: Joi.string().min(6).required()
