@@ -28,7 +28,7 @@ function result(succ, msg, details) {
 router.post('/register', async (req, res) => {
     const {
         error
-    } = registerValidation(req.body)
+    } = registerValidation(req.body);
     if (error) return res.status(200).json(result(0, error.details[0].message))
 
     //username exist

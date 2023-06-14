@@ -1,4 +1,6 @@
-const { object } = require('joi')
+const {
+    object
+} = require('joi')
 const mongoose = require('mongoose')
 const moment = require('moment');
 
@@ -26,7 +28,7 @@ const userSchema = mongoose.Schema({
     versionKey: false
 })
 
-userSchema.method('toJSON', function() {
+userSchema.method('toJSON', function () {
     const {
         _id,
         ...object
@@ -39,4 +41,4 @@ userSchema.method('toJSON', function() {
     return object
 })
 
-module.exprorts = mongoose.model('User', userSchema, 'user')
+module.exprorts = mongoose.model('User', userSchema)
