@@ -72,7 +72,6 @@ router.post('/', async (req, res) => {
         content: req.body.content,
         user_id: req.body.user_id,
         nama_anda: req.body.nama_anda,
-        tanggal_waktu: req.body.tanggal_waktu,
         lokasi: req.body.lokasi,
         keterangan: req.body.keterangan
     })
@@ -90,14 +89,13 @@ router.put('/', async (req, res) => {
         id: req.body.id,
         content: req.body.content,
         nama_anda: req.body.nama_anda,
-        tanggal_waktu: req.body.tanggal_waktu,
         lokasi: req.body.lokasi,
         keterangan: req.body.keterangan,
         modified_date: Date.now()
     }
 
     try {
-        const post = await Post.ipdateOne({
+        const post = await Post.updateOne({
             _id: data.id
         }, data)
 

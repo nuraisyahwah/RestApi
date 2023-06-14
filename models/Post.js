@@ -14,10 +14,6 @@ const postSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    tangaal_waktu: {
-        type: Date,
-        required: true
-    },
     keterangan: {
         type: String,
         required: true
