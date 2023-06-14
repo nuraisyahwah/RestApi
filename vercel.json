@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "rest-Api",
+    "name": "rest-api",
     "builds": [{
         "src": "app.js",
         "use": "@vercel/node"
