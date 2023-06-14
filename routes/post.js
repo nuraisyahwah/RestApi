@@ -69,8 +69,12 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const inputPost = new Post({
-        content: eq.body.content,
-        user_id: req.body.user_id
+        content: req.body.content,
+        user_id: req.body.user_id,
+        nama_anda: req.body.nama_anda,
+        tanggal_waktu: req.body.tanggal_waktu,
+        lokasi: req.body.lokasi,
+        keterangan: req.body.keterangan
     })
 
     try {
@@ -85,6 +89,10 @@ router.put('/', async (req, res) => {
     const data = {
         id: req.body.id,
         content: req.body.content,
+        nama_anda: req.body.nama_anda,
+        tanggal_waktu: req.body.tanggal_waktu,
+        lokasi: req.body.lokasi,
+        keterangan: req.body.keterangan,
         modified_date: Date.now()
     }
 

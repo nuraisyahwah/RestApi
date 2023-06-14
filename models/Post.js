@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const postSchema = mongoose.Schema({
-    nama: {
+    nama_anda: {
         type: String,
         required: true
     },
@@ -10,7 +10,15 @@ const postSchema = mongoose.Schema({
         ref: 'User',
         required: true
     },
-    alamat: {
+    lokasi: {
+        type: String,
+        required: true
+    },
+    tangaal_waktu: {
+        type: Date,
+        required: true
+    },
+    keterangan: {
         type: String,
         required: true
     },
